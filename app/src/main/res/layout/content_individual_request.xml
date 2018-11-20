@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/request_view_layout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="MovieNamexMovieNamexMovieNamexMovieNamexMovieNamexMovieNamex"
+                android:id="@+id/movieConfirmationText"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="none"
+                android:scrollHorizontally="false"
+                android:layout_weight="1"
+                android:maxLines="100"
+                android:layout_toStartOf="@+id/menuImageButton"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_menu_nav"
+                android:id="@+id/menuImageButton"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:adjustViewBounds="false"
+                android:minHeight="50dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/requestBodyBackground"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Location"
+                    android:id="@+id/locationConfirmationLabel"
+                    android:textStyle="bold"
+                    android:textColor="#303F9F"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" : "
+                    android:id="@+id/staticColonLabel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="locationConfirmationText"
+                    android:id="@+id/locationConfirmationText"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Theaters"
+                    android:id="@+id/theaterConfirmationLabel"
+                    android:layout_column="0"
+                    android:textStyle="bold"
+                    android:textColor="#303F9F"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" : "
+                    android:id="@+id/textView3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="theaterConfirmationTexttheaterConfirmationTexttheaterConfirmationTexttheaterConfirmationText"
+                    android:id="@+id/theaterConfirmationText"
+                    android:ellipsize="none"
+                    android:scrollHorizontally="false"
+                    android:layout_weight="1"
+                    android:maxLines="100"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Target Date"
+                    android:id="@+id/dateConfirmationLabel"
+                    android:textStyle="bold"
+                    android:textColor="#303F9F"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" : "
+                    android:id="@+id/textView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="targetDate"
+                    android:id="@+id/dateConfirmationText"
+                    android:ellipsize="none"
+                    android:scrollHorizontally="false"
+                    android:layout_weight="1"
+                    android:maxLines="100"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/completionDateRow">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Complete Date"
+                    android:id="@+id/textView11"
+                    android:textStyle="bold"
+                    android:textColor="#303F9F"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=":"
+                    android:id="@+id/textView15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="completionDate"
+                    android:id="@+id/completionDate"
+                    android:ellipsize="none"
+                    android:scrollHorizontally="false"
+                    android:layout_weight="1"
+                    android:maxLines="100"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

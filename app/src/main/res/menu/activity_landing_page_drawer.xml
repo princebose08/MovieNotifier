@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/scheduled_notification"
+            android:icon="@drawable/ic_access_alarm_24dp"
+            android:title="Scheduled Notifications" />
+        <item
+            android:id="@+id/completed_notification"
+            android:icon="@drawable/ic_success_check"
+            android:title="Completed Notifications" />
+        <item
+            android:id="@+id/failed_notification"
+            android:icon="@drawable/ic_failure_cross"
+            android:title="Failed Notifications" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Action">
+        <menu>
+            <item
+                android:id="@+id/start_notification_scheduling"
+                android:icon="@drawable/ic_notifications_on_24dp"
+                android:title="Schedule Notification" />
+        </menu>
+    </item>
+
+</menu>

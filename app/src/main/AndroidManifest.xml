@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pbose.movienotifier">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LandingPageActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.example.pbose.background.SystemBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.example.pbose.background.MovieAvailabilityReceiver"
+            android:process=":remote"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.example.pbose.background.MovieAvailabilityCheckerService"
+            android:exported="false" />
+
+        <activity android:name=".LocationSelectionActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".MovieSelectionActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".TheaterSelectionActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".DateSelectionActivity"  android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".ConfirmationPageActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".RequestDisplayActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+    </application>
+
+</manifest>

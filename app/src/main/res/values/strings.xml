@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Movie Notifier</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_country_selection">CountrySelectionActivity</string>
+    <string name="title_activity_landing_page">LandingPageActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_alert_message">This will cancel the notification scheduling and redirect to home page. Do you want to continue ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
